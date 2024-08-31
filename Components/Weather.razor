@@ -1,0 +1,24 @@
+@page "/weather"
+
+@code 
+{
+    double _sanFranciscoTemp, _newYorkTemp, _miamiTemp;
+
+    protected override Task OnInitializedAsync()
+    {
+        var rand = new Random();
+        _sanFranciscoTemp = rand.Next(400,800) / 10.0;
+        _newYorkTemp = rand.Next(200,500) / 10.0;
+        _miamiTemp = rand.Next(700,900) / 10.0;
+
+        return base.OnInitializedAsync();
+    }
+}
+
+<h2>Current Weather</h2>
+
+<ul>
+    <li>San Francisco: @_sanFranciscoTemp</li>
+    <li>New York: @_newYorkTemp</li>
+    <li>Miami: @_miamiTemp</li>
+</ul>

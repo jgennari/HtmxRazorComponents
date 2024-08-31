@@ -1,0 +1,10 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<h1>Home</h1>
+<div hx-get="/weather" hx-trigger="load" hx-swap="innerHTML">
+
+</div>
